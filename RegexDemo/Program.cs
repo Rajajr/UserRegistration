@@ -10,9 +10,12 @@ namespace RegexDemo
     {
         static void Main(string[] args)
         {
+            //UC-2 Enter a valid Last Name
             Console.WriteLine("Welcome to User Registration");
             
-            UserName.UsersFirstName();
+
+            //UserName.UsersFirstName();
+            UserName.UserLastName();
             Console.ReadLine();
         }
     }
