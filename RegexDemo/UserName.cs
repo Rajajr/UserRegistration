@@ -11,17 +11,17 @@ namespace RegexDemo
     {
         public static void UsersFirstName()
         {
-            
+
             string[] arr = { "Raja", "raja", "ra24", "RAja678" };
             string pattern = "^[A-Z][a-z]{3}";
 
-            foreach(string input in arr)
+            foreach (string input in arr)
             {
                 if (Regex.IsMatch(input, pattern))
 
                     Console.WriteLine("{0} User Fist Name matches", input);
                 else
-                    Console.WriteLine("{0} User First Name Doesn't matches",input);
+                    Console.WriteLine("{0} User First Name Doesn't matches", input);
                 Console.WriteLine("-------------------------------------------------");
             }
 
@@ -43,16 +43,31 @@ namespace RegexDemo
         }
         public static void Email()
         {
-            string[] arr = { "rajjr011@gmail.com","rajJR011@GMAIL","raJAjr234@gmail.com"};
+            string[] arr = { "rajjr011@gmail.com", "rajJR011@GMAIL", "raJAjr234@gmail.com" };
             string pattern = @"^[a-z0-9_\-\.]+[@][a-z]+[\.][a-z]{3,}";
 
-            foreach(string input in arr)
+            foreach (string input in arr)
             {
                 if (Regex.IsMatch(input, pattern))
 
                     Console.WriteLine("{0} User Email matches", input);
                 else
                     Console.WriteLine("{0} User Email Doesn't matches", input);
+                Console.WriteLine("--------------------------------------------------");
+            }
+        }
+        public static void PhoneNumber()
+        {
+            string[] arr = { "916379386500", "458765654455", "7819815787" };
+            string pattern = @"^[91][0-9]{10,}";
+
+            foreach (string input in arr)
+            {
+                if (Regex.IsMatch(input, pattern))
+
+                    Console.WriteLine("{0} User Mobile Number matches", input);
+                else
+                    Console.WriteLine("{0} User Mobile Number Doesn't matches", input);
                 Console.WriteLine("--------------------------------------------------");
             }
         }
