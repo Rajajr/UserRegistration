@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RegexDemo
 {
-    public class UserName
+    class UserName
     {
         public static void UsersFirstName()
         {
@@ -38,6 +38,21 @@ namespace RegexDemo
                     Console.WriteLine("{0} User last Name matches", input);
                 else
                     Console.WriteLine("{0} User last Name Doesn't matches", input);
+                Console.WriteLine("--------------------------------------------------");
+            }
+        }
+        public static void Email()
+        {
+            string[] arr = { "rajjr011@gmail.com","rajJR011@GMAIL","raJAjr234@gmail.com"};
+            string pattern = @"^[a-z0-9_\-\.]+[@][a-z]+[\.][a-z]{3,}";
+
+            foreach(string input in arr)
+            {
+                if (Regex.IsMatch(input, pattern))
+
+                    Console.WriteLine("{0} User Email matches", input);
+                else
+                    Console.WriteLine("{0} User Email Doesn't matches", input);
                 Console.WriteLine("--------------------------------------------------");
             }
         }
