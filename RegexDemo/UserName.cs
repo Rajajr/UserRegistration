@@ -75,8 +75,8 @@ namespace RegexDemo
         }
         public static void Password()
         {
-            string[] password = { "raja011", "098765", "RajaRavi" };
-            string pattern = @"^[a-zA-Z0-9]{8,}";
+            string[] password = { "raj", "098765", "rajaravi" };
+            string pattern = @"^[a-z]{8,}";
 
             foreach (string input in password)
             {
@@ -88,5 +88,21 @@ namespace RegexDemo
                 Console.WriteLine("--------------------------------------------------");
             }
         }
+        public static void Password1()
+        {
+            string[] password1 = { "RajaRavi", "3456789", "raja"};
+            string pattern =@"^[A-Za-z]{8,}";
+
+            foreach (string input in password1)
+            {
+                if (Regex.IsMatch(input, pattern))
+
+                    Console.WriteLine("{0} User Password matches", input);
+                else
+                    Console.WriteLine("{0} User Password Doesn't matches", input);
+                Console.WriteLine("--------------------------------------------------");
+            }
+        }
+       
     }
 }
