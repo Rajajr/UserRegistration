@@ -10,14 +10,15 @@ namespace RegexDemo
     {
         static void Main(string[] args)
         {
-            //UC-4 Enter a valid MobileNumber
+            //UC-5 User need to follow pre-defined password rules.
             Console.WriteLine("Welcome to User Registration");
-            
+
 
             //UserName.UsersFirstName();
             //UserName.UserLastName();
             //UserName.Email();
-            UserName.PhoneNumber();
+            //UserName.PhoneNumber();
+            UserName.Password();
             Console.ReadLine();
         }
     }

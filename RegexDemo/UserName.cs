@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace RegexDemo
 {
@@ -13,7 +14,7 @@ namespace RegexDemo
         {
 
             string[] arr = { "Raja", "raja", "ra24", "RAja678" };
-            string pattern = "^[A-Z][a-z]{3}";
+            string pattern = "^[A-Z][a-z][0-9]{3,}";
 
             foreach (string input in arr)
             {
@@ -29,7 +30,7 @@ namespace RegexDemo
         public static void UserLastName()
         {
             string[] arr = { "Ravi", "ravi", "ra24", "RAvi678" };
-            string pattern = "^[A-Z][a-z]{3}";
+            string pattern = "^[A-Z][a-z][0-9]{3,}";
 
             foreach (string input in arr)
             {
@@ -68,6 +69,22 @@ namespace RegexDemo
                     Console.WriteLine("{0} User Mobile Number matches", input);
                 else
                     Console.WriteLine("{0} User Mobile Number Doesn't matches", input);
+                Console.WriteLine("--------------------------------------------------");
+            }
+            
+        }
+        public static void Password()
+        {
+            string[] password = { "raja011", "098765", "RajaRavi" };
+            string pattern = @"^[a-zA-Z0-9]{8,}";
+
+            foreach (string input in password)
+            {
+                if (Regex.IsMatch(input, pattern))
+
+                    Console.WriteLine("{0} User Password matches", input);
+                else
+                    Console.WriteLine("{0} User Password Doesn't matches", input);
                 Console.WriteLine("--------------------------------------------------");
             }
         }
