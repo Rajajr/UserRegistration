@@ -103,6 +103,21 @@ namespace RegexDemo
                 Console.WriteLine("--------------------------------------------------");
             }
         }
+        public static void Password2()
+        {
+            string[] password2 = { "RajaRavi01", "3456789", "raja" };
+            string pattern = @"^[A-Za-z0-9]{10,}";
+
+            foreach (string input in password2)
+            {
+                if (Regex.IsMatch(input, pattern))
+
+                    Console.WriteLine("{0} User Password matches", input);
+                else
+                    Console.WriteLine("{0} User Password Doesn't matches", input);
+                Console.WriteLine("--------------------------------------------------");
+            }
+        }
        
     }
 }

@@ -10,7 +10,7 @@ namespace RegexDemo
     {
         static void Main(string[] args)
         {
-            //UC-6 Rule-Should have at least 1 Upper Case.
+            //UC-7 Rule3-Should have at least 1 Numeric Number in the password.
             Console.WriteLine("Welcome to User Registration");
 
 
@@ -19,7 +19,8 @@ namespace RegexDemo
             //UserName.Email();
             //UserName.PhoneNumber();
             //UserName.Password();
-            UserName.Password1();
+            //UserName.Password1();
+            UserName.Password2();
             Console.ReadLine();
         }
     }
