@@ -105,8 +105,8 @@ namespace RegexDemo
         }
         public static void Password2()
         {
-            string[] password2 = { "RajaRavi01", "3456789", "raja" };
-            string pattern = @"^[A-Za-z0-9]{10,}";
+            string[] password2 = { "RajaRavi011", "3456789", "raja" };
+            string pattern = @"^[A-Za-z0-9]{11,}";
 
             foreach (string input in password2)
             {
